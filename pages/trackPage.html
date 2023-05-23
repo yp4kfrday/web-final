@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Musify</title>
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/table.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <nav class="navbar">
+            <div class="menu">
+                <h3 class="logo">Musify<span>Company</span></h3>
+                <div class="burger">
+                    <div class="burger__item"></div>
+                </div>
+            </div>
+        </nav>
+
+        <div class="sreen" id="One">
+            <div class="main">
+                <header class="header__one">
+                    <div class="header">
+
+                        <form class="form-container">
+                            <input type="hidden" id="id">
+                            <label for="name">Name</label><br>
+                            <input type="text" id="name" name="name"><br><br>
+                            <label for="duration">Duration</label><br>
+                            <input type="text" id="duration" name="duration"><br><br>
+                            <label for="albumNumber">AlbumNumber</label><br>
+                            <select id="albumNumber" name="albumNumber"></select>
+                            <br><br>
+
+                            <label for="feat">Feat</label><br>
+                            <input type="text" id="feat" name="feat"><br><br>
+                            <div class="buttons">
+                                <button class="submit">Отправить</button>
+                            </div>
+                        </form>
+
+                        <table class="lovefield" id="tracksTable">
+                            <caption>Песни</caption>
+                            <thead>
+                                <tr>
+                                    <th>Id</th>
+                                    <th>Name</th>
+                                    <th>Duration</th>
+                                    <th>Album number</th>
+                                    <th>Feat</th>
+                                    <th>Actions</th>
+                                </tr>
+                            </thead>
+                            <tbody></tbody>
+                        </table>
+
+                    </div>
+                </header>
+            </div>
+
+            <div class="shadow one"></div>
+            <div class="shadow two"></div>
+        </div>
+
+        <div class="links">
+            <ul>
+                <li>
+                    <a class="link" data-link="Artists" href="./trackPage.html" style="--i: .1s">Tracks</a>
+                </li>
+
+                <li>
+                    <a class="link" data-link="Two" href="./albumPage.html" style="--i: .15s">Albums</a>
+                </li>
+
+                <li>
+                    <a class="link" data-link="Tracks" href="./artistPage.html" style="--i: .2s">Artists</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <script src="../js/main.js"></script>
+    <script src="../js/trackTableLogic.js"></script>
+</body>
+
+</html>

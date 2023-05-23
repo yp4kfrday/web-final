@@ -1,0 +1,308 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: antiquewhite;
+}
+
+/*-------------------------Navbar-------------------------*/
+
+.navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 10;
+    height: .3rem;
+}
+
+.menu {
+    max-width: 72rem;
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+.logo {
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    line-height: 5rem;
+}
+
+span {
+    font-weight: 300;
+}
+
+.burger {
+    height: 4rem;
+    width: 3rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.burger__item{
+    width: 1.9rem;
+    height: 1.5px;
+    border-radius: 2px;
+    background-color: #eee;
+    transition: .3s;
+    position: relative;
+    animation-fill-mode: forwards;
+}
+
+.burger__item:after {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: .3s;
+    transform-style: preserve-3d;
+    transform: translateY(9px);
+}
+
+.burger__item:before {
+    content: '';
+    position: absolute;
+    width: inherit;
+    height: inherit;
+    background-color: #eee;
+    transition: .3s;
+    transform: translateY(-9px);
+}
+
+/*-------------------------Page Content-------------------------*/
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #485461;
+    background-image: linear-gradient(135deg, #485461 0%, #28313b 74%);
+    overflow: hidden;
+    transform-style: preserve-3d;
+}
+
+ /*Main Content*/
+
+.main{
+    position: relative;
+    width: 100%;
+    left: 0;
+    z-index: 5;
+    overflow: hidden;
+    transform-origin: left;
+    transform-style: preserve-3d;
+    transition: .5s;
+}
+
+header {
+    min-height: 100vh;
+    width: 100%;
+    position: relative;
+    background-color: black;
+}
+
+
+.header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background-color: rgba(43, 51, 59, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header__item {
+    max-width: 35rem;
+    text-align: center;
+    color: white;
+    padding: 0 2rem;
+}
+
+.title {
+    font-size: 2.7rem;
+}
+
+.btn {
+    margin-top: 1rem;
+    padding: 0.6rem 1.6rem;
+    background-color: rgb(55, 55, 146);
+    border: none;
+    border-radius: 38%;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+/*-------------------------Shadows-------------------------*/
+
+.shadow {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    top:0;
+    left:0;
+    transform-style: preserve-3d;
+    transform-origin: left;
+    transition: .5s;
+    background: #eee;
+}
+
+.shadow.one{
+    z-index: -1;
+    opacity: .15;
+}
+
+.shadow.two{
+    z-index: -2;
+    opacity: .1;
+}
+
+/*links*/
+
+.links {
+    position: absolute;
+    width: 30%;
+    right: 0;
+    top: 0;
+    height: 100vh;
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.links a {
+    text-decoration: none;
+    color: #eee;
+    padding: .03rem 0;
+    margin: .5rem;
+    font-size: 1.5rem;
+    display: inline-block;
+    font-weight: 300;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: .3s;
+    opacity: 0;
+    transform: translateY(10px);
+    animation: hide .5s forwards ease;
+}
+
+.links ul {
+    list-style: none;
+}
+
+/*-------------------------Animations-------------------------*/
+
+/*Animation for nav*/
+.container.active .burger__item {
+    transform: rotate(360deg);
+}
+
+.container.active .burger__item :after {
+    transform: translateY(-9px);
+}
+
+.container.active .burger__item :before {
+    transform: translateY(-9px);
+}
+
+/*Animation for main(open nav)*/
+
+.container.active .main {
+    animation: main-animation 1s ease;
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+}
+
+.container.active .shadow.one {
+    animation: shadow-one .6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+}
+
+.container.active .shadow.two {
+    animation: shadow-two .6s ease-out;
+    transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+}
+
+.container.active .links a {
+    animation: appear 0.5s forwards ease var(--i);
+}
+
+/*--------------------------KeyFrames-------------------------*/
+
+
+/*Keyframes for main*/
+
+@keyframes main-animation {
+    from {
+        transform: translate(0);
+    }
+    to {
+        transform: perspective(1300px) rotateY(20deg) translateZ(310px) scale(0.5);
+    }
+}
+
+/*Keyframes for shadows*/
+
+@keyframes shadow-one {
+    0% {
+        transform: translate(0);
+    }
+    5% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(215px) scale(0.5);
+    }
+    100% {
+
+    }
+}
+
+@keyframes shadow-two {
+    0% {
+        transform: translate(0);
+    }
+    20% {
+        transform: perspective(1300px) rotateY(20deg) translateZ(120px) scale(0.5);
+    }
+    100% {
+
+    }
+}
+
+@keyframes hide {
+    from{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+    to{
+        opacity: 0;
+        transform: translateY(10px);
+    }
+}
+
+@keyframes appear {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}

@@ -1,0 +1,125 @@
+{
+    "tracks": [
+        {
+            "id": 1,
+            "name": "Whole Lotta Love",
+            "duration": 3.30,
+            "albumNumber": 1,
+            "feat": 2
+        },
+        {
+            "id": 2,
+            "name": "Sympathy for the Devil",
+            "duration": 3.40,
+            "albumNumber": 2,
+            "feat": 4
+        },
+        {
+            "id": 3,
+            "name": "Iron Man",
+            "duration": 4.20,
+            "albumNumber": 3,
+            "feat": 3
+        },
+        {
+            "id": 4,
+            "name": "Barracuda",
+            "duration": 3.40,
+            "albumNumber": 4,
+            "feat": 2
+        },
+        {
+            "id": 5,
+            "name": "Smoke on the Water",
+            "duration": 3.15,
+            "albumNumber": 5,
+            "feat": 2
+        },
+        {
+            "id": 6,
+            "name": "Smells Like Teen Spirit",
+            "duration": 3.45,
+            "albumNumber": 6,
+            "feat": 1
+        },
+        {
+            "id": 7,
+            "name": "We Will Rock You",
+            "duration": 3.35,
+            "albumNumber": 6,
+            "feat": 2
+        },
+        {
+            "id": 8,
+            "name": "Paranoid",
+            "duration": 2.15,
+            "albumNumber": 6,
+            "feat": 0
+        },
+        {
+            "id": 9,
+            "name": "Knocking on Heavens Door",
+            "duration": 4.15,
+            "albumNumber": 6,
+            "feat": 0
+        }
+    ],
+    "artists": [
+        {
+            "id": 1,
+            "alias": "The Beatles",
+            "fullName": "John Lennon",
+            "dateOfBirth": "1980-01-29"
+          },
+          {
+            "id": 2,
+            "alias": "Queen",
+            "fullName": "Bob Levandovski",
+            "dateOfBirth": "1990-01-27"
+          },
+          {
+            "id": 3,
+            "alias": "Led Zeppelin",
+            "fullName": "John Depp",
+            "dateOfBirth": "1999-10-25"
+          }  
+    ],
+    "albums": [
+        {
+            "id": 1,
+            "nameAlbum": "Back in Black",
+            "releaseDate": "1999-08-08",
+            "artistNumber": 1
+          },
+          {
+            "id": 2,
+            "nameAlbum": "Highway to Hell",
+            "releaseDate": "1999-10-08",
+            "artistNumber": 1
+          },
+          {
+            "id": 3,
+            "nameAlbum": "Dark Horse",
+            "releaseDate": "1999-01-11",
+            "artistNumber": 2
+          },
+          {
+            "id": 4,
+            "nameAlbum": "Aerosmith",
+            "releaseDate": "2000-02-13",
+            "artistNumber": 2
+          },
+          {
+            "id": 5,
+            "nameAlbum": "Chinese Democracy",
+            "releaseDate": "2002-03-12",
+            "artistNumber": 3
+          },
+          {
+            "id": 6,
+            "nameAlbum": "Hysteria",
+            "releaseDate": "2004-05-07",
+            "artistNumber": 3
+          }
+    ]
+}

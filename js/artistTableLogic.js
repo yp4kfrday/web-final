@@ -170,7 +170,7 @@ $(document).ready(function () {
                 .removeClass("update")
                 .addClass("submit")
                 .text("Отправить");
-        }, 3000);
+        }, 2000);
     });
 
     $(document).on("click", ".delete", function () {
